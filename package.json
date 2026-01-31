@@ -17,8 +17,7 @@
     "dotenv": "17.2.3",
     "postgres": "3.4.8",
     "prisma-sql": "1.37.0",
-    "reflect-metadata": "0.2.2",
-    "ts-node": "10.9.2"
+    "reflect-metadata": "0.2.2"
   },
   "devDependencies": {
     "@types/bcrypt": "6.0.0",
