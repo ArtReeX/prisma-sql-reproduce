@@ -16,6 +16,7 @@ async function reproduce() {
     select: {
       id: true,
       isDeleted: true,
+      permissions: true,
       country: { select: { countryNameEn: true } },
     },
   });

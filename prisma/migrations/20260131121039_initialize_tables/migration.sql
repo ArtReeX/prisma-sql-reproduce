@@ -2,10 +2,10 @@
 CREATE EXTENSION IF NOT EXISTS "pg_trgm";
 
 -- CreateEnum
-CREATE TYPE "UserFlag" AS ENUM ('RED', 'WHITE', 'GREEN', 'YELLOW');
+CREATE TYPE "UserFlag" AS ENUM ('red', 'white', 'green', 'yellow');
 
 -- CreateEnum
-CREATE TYPE "UserPermission" AS ENUM ('FAQS', 'KICK', 'USERS', 'CHATS', 'SLOTS', 'BLOGS', 'MERCHS', 'REWARDS', 'CASINOS', 'PROVIDERS', 'LOOTBOXES', 'MILESTONES', 'BONUS_HUNTS', 'POINTS_SHOP', 'PROMO_CODES', 'TOURNAMENTS', 'LEADERBOARDS', 'WIN_TRACKERS', 'SLOTS_BATTLES', 'NOTIFICATIONS', 'SESSION_TRACKERS');
+CREATE TYPE "UserPermission" AS ENUM ('faqs', 'kick', 'users', 'chats', 'slots', 'blogs', 'merchs', 'rewards', 'casinos', 'providers', 'lootboxes', 'milestones', 'bonus_hunts', 'points_shop', 'promo_codes', 'tournaments', 'leaderboards', 'win_trackers', 'slots_battles', 'notifications', 'session_trackers');
 
 -- CreateTable
 CREATE TABLE "countries" (
@@ -54,7 +54,7 @@ CREATE TABLE "users" (
     "razed_id" TEXT,
     "razed_access_token" TEXT,
     "country_code" TEXT NOT NULL,
-    "flag" "UserFlag" NOT NULL DEFAULT 'WHITE',
+    "flag" "UserFlag" NOT NULL DEFAULT 'white',
     "permissions" "UserPermission"[] DEFAULT ARRAY[]::"UserPermission"[],
     "balance" INTEGER NOT NULL DEFAULT 0,
     "experience_points" INTEGER NOT NULL DEFAULT 0,

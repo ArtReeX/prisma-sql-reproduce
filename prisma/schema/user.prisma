@@ -1,32 +1,32 @@
 enum UserFlag {
-  RED
-  WHITE
-  GREEN
-  YELLOW
+  RED    @map("red")
+  WHITE  @map("white")
+  GREEN  @map("green")
+  YELLOW @map("yellow")
 }
 
 enum UserPermission {
-  FAQS
-  KICK
-  USERS
-  CHATS
-  SLOTS
-  BLOGS
-  MERCHS
-  REWARDS
-  CASINOS
-  PROVIDERS
-  LOOTBOXES
-  MILESTONES
-  BONUS_HUNTS
-  POINTS_SHOP
-  PROMO_CODES
-  TOURNAMENTS
-  LEADERBOARDS
-  WIN_TRACKERS
-  SLOTS_BATTLES
-  NOTIFICATIONS
-  SESSION_TRACKERS
+  FAQS             @map("faqs")
+  KICK             @map("kick")
+  USERS            @map("users")
+  CHATS            @map("chats")
+  SLOTS            @map("slots")
+  BLOGS            @map("blogs")
+  MERCHS           @map("merchs")
+  REWARDS          @map("rewards")
+  CASINOS          @map("casinos")
+  PROVIDERS        @map("providers")
+  LOOTBOXES        @map("lootboxes")
+  MILESTONES       @map("milestones")
+  BONUS_HUNTS      @map("bonus_hunts")
+  POINTS_SHOP      @map("points_shop")
+  PROMO_CODES      @map("promo_codes")
+  TOURNAMENTS      @map("tournaments")
+  LEADERBOARDS     @map("leaderboards")
+  WIN_TRACKERS     @map("win_trackers")
+  SLOTS_BATTLES    @map("slots_battles")
+  NOTIFICATIONS    @map("notifications")
+  SESSION_TRACKERS @map("session_trackers")
 }
 
 model User {
