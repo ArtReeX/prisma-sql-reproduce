@@ -7,8 +7,17 @@ async function reproduce() {
   const client = prisma.$extends(speedExtension(EXTENSION_OPTIONS));
 
   const user = await client.user.findFirst({
-    where: { kickId: null, country: { countryCode: 'US' }, permissions: { has: UserPermission.USERS } },
-    select: { id: true, isDeleted: true, country: { select: { countryNameEn: true } } },
+    where: {
+      kickId: null,
+      country: { countryCode: 'US' },
+      permissions: { has: UserPermission.USERS },
+      email: { contains: 'system', mode: 'insensitive' },
+    },
+    select: {
+      id: true,
+      isDeleted: true,
+      country: { select: { countryNameEn: true } },
+    },
   });
 
   console.table(user);
