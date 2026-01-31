@@ -11,6 +11,5 @@ export const users: Prisma.UserCreateManyInput[] = [
     flag: UserFlag.GREEN,
     permissions: Object.values(UserPermission),
     password: bcrypt.hashSync('qwerty12345678', 10),
-    avatarUrl: new URL('/static/logo.svg', 'http://localhost:3000').toString(),
   },
 ];
