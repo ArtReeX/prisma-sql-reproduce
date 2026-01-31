@@ -7,7 +7,7 @@ async function reproduce() {
   const client = prisma.$extends(speedExtension(EXTENSION_OPTIONS));
 
   const user = await client.user.findFirst({
-    where: { kickId: { not: null }, isDeleted: false },
+    where: { kickId: null, isDeleted: false, country: { countryCode: 'US' } },
     select: { id: true, isDeleted: true, country: { select: { countryNameEn: true } } },
   });
 
