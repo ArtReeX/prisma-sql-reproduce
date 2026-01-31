@@ -1,5 +1,5 @@
 import { EXTENSION_OPTIONS, PRISMA_OPTIONS } from 'src/config';
-import { PrismaClient } from '../prisma/.generated/client';
+import { PrismaClient, UserPermission } from '../prisma/.generated/client';
 import { speedExtension } from '../prisma/.generated/sql';
 
 async function reproduce() {
@@ -7,7 +7,7 @@ async function reproduce() {
   const client = prisma.$extends(speedExtension(EXTENSION_OPTIONS));
 
   const user = await client.user.findFirst({
-    where: { kickId: null, isDeleted: false, country: { countryCode: 'US' } },
+    where: { kickId: null, country: { countryCode: 'US' }, permissions: { has: UserPermission.USERS } },
     select: { id: true, isDeleted: true, country: { select: { countryNameEn: true } } },
   });
 
