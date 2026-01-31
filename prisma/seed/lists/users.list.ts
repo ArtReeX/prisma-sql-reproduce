@@ -1,5 +1,5 @@
 import bcrypt from 'bcrypt';
-import { Prisma, UserFlag, UserPermission } from '../../../src/.generated/client';
+import { Prisma, UserFlag, UserPermission } from '../../.generated/client';
 
 export const users: Prisma.UserCreateManyInput[] = [
   {

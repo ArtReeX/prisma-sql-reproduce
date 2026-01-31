@@ -4,7 +4,7 @@ generator client {
   engineType      = "client"
   compilerBuild   = "fast"
   moduleFormat    = "cjs"
-  output          = "../../src/.generated"
+  output          = "../.generated"
   binaryTargets   = ["native", "debian-openssl-3.0.x"]
   previewFeatures = ["relationJoins", "strictUndefinedChecks", "nativeDistinct", "postgresqlExtensions", "views"]
 }
@@ -16,14 +16,14 @@ datasource db {
 
 generator json {
   provider     = "prisma-json-types-generator"
-  clientOutput = "../../src/.generated"
+  clientOutput = "../.generated"
   allowAny     = false
 }
 
 generator sql {
   provider    = "prisma-sql-generator"
   dialect     = "postgres"
-  output      = "../../src/.generated/sql"
+  output      = "../.generated/sql"
   skipInvalid = true
 }
 

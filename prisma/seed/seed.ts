@@ -1,5 +1,5 @@
 import { PrismaPg } from '@prisma/adapter-pg';
-import { PrismaClient } from '../../src/.generated/client';
+import { PrismaClient } from '../.generated/client';
 import { countries } from './lists/countries.list';
 import { users } from './lists/users.list';
 

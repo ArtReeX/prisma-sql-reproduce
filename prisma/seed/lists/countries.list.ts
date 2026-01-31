@@ -1,4 +1,4 @@
-import { Prisma } from '../../../src/.generated/client';
+import { Prisma } from '../../.generated/client';
 
 export const countries: Prisma.CountryCreateManyInput[] = [
   {

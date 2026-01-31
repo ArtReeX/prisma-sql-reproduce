@@ -2,8 +2,8 @@ import { PrismaPg } from '@prisma/adapter-pg';
 import 'dotenv/config';
 import os from 'os';
 import postgres from 'postgres';
-import { PrismaClientOptions } from 'src/.generated/internal/prismaNamespace';
-import { speedExtension } from 'src/.generated/sql';
+import { PrismaClientOptions } from 'prisma/.generated/internal/prismaNamespace';
+import { speedExtension } from 'prisma/.generated/sql';
 
 export const PRISMA_OPTIONS: PrismaClientOptions = {
   adapter: new PrismaPg({
