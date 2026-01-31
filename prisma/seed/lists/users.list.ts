@@ -3,7 +3,7 @@ import { Prisma, UserFlag, UserPermission } from '../../.generated/client';
 
 export const users: Prisma.UserCreateManyInput[] = [
   {
-    email: 'system@slotessentials.com',
+    email: 'system@prisma.com',
     emailVerified: true,
     policyAgreed: true,
     username: 'System',
