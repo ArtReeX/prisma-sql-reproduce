@@ -21,7 +21,7 @@ async function reproduce() {
     },
   });
 
-  console.table(user);
+  console.log(user);
 }
 
 reproduce();
