@@ -11,7 +11,7 @@ async function reproduce() {
     select: { id: true, isDeleted: true, country: { select: { countryNameEn: true } } },
   });
 
-  console.log(user);
+  console.table(user);
 }
 
 reproduce();
