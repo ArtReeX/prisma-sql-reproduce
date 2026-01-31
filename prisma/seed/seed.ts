@@ -8,12 +8,8 @@ async function executeSeeds() {
 
   try {
     await prisma.$transaction(async (tx) => {
-      if (!(await tx.country.count())) {
-        await tx.country.createMany({ skipDuplicates: true, data: countries });
-      }
-      if (!(await tx.user.count())) {
-        await tx.user.createMany({ skipDuplicates: true, data: users });
-      }
+      await tx.country.createMany({ skipDuplicates: true, data: countries });
+      await tx.user.createMany({ skipDuplicates: true, data: users });
     });
   } catch (error) {
     console.log(error);
